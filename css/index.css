@@ -1,0 +1,23 @@
+/* EXTERNALS  (Estas son las fuentes) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&family=Raleway:wght@100;300;400;500;600;700;900&display=swap");
+
+/* MISCELANEOUS */
+@import url(./misc/variables.css);
+@import url(./misc/normalize.css);
+
+/* PARTIALS */
+@import url(./partials/header.css);
+@import url(./partials/footer.css);
+
+/* PAGES */
+@import url(./pages/home.css);
+@import url(./pages/shop.css);
+@import url(./pages/item.css);
+@import url(./pages/shopping-cart.css);
+
+/* ANIMATIONS */
+
+/*En index solo va la importación de los css de las páginas, 
+cada CSS se trabaja en su hoja de estilos de página.
+Para que funcione el CSS en cada pagína tienen que hacer link a este index 
+<link rel="stylesheet" href="../../css/index.css"> (chequear ruta)*/
