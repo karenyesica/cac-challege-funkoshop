@@ -46,39 +46,42 @@
             </ul>
         </nav>
     </header><!--Fin de header-->
-    <main>
-        <section><!--Inicio Item-->
-            <picture>
-                <img src="../../img/star-wars/baby-yoda-1.webp"
+    <main class="container">
+        <section class="item"><!--Inicio Item-->
+            <picture class="item__img card-item__cover">
+                <img class="card-item__img--front" src="../../img/star-wars/baby-yoda-1.webp"
                     alt="   Figura coleccionable Funko de la serie The Mandalorian">
-                <img src="../../img/star-wars/baby-yoda-box.webp"
+                <img class="card-item__img--back" src="../../img/star-wars/baby-yoda-box.webp"
                     alt="   Figura coleccionable Funko de la serie The Mandalorian en caja">
             </picture>
-            <article>
-                <p>STAR WARS</p>
-                <h3>BABY YODA BLUEBALL</h3>
-                <p>Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición
+            <article class="item__content">
+                <p class="item__license">STAR WARS</p>
+                <h3 class="item__name">BABY YODA BLUEBALL</h3>
+                <p class="item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición
                     limitada.</p>
-                <p>$ 1799,99</p>
-                <form action="">
+                <p class="item__price">$ 1799,99</p>
+                <form class="item__cart" action="">
                     <div>
-                        <input type="text" name="quantity" id="quantity" placeholder="0" autocomplete="off">
-                        <div>
-                            <button type="button"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="9"
-                                    viewBox="0 0 8 8" fill="none">
+                        <input class="item__input" type="text" name="quantity" id="quantity" placeholder="0"
+                            autocomplete="off">
+                        <div class="item__quantity">
+                            <button id="add" class="item__quantity--plus" type="button"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 8"
+                                    fill="none">
                                     <path
                                         d="M3.32121 8.13501V0.13501H4.67879V8.13501H3.32121ZM0 4.8138V3.45622H8V4.8138H0Z"
                                         fill="white" />
                                 </svg></button>
-                            <button type="button"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="2"
-                                    viewBox="0 0 6 2" fill="none">
+                            <button id="subtract" class="item__quantity--minus" type="button"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 6 2"
+                                    fill="none">
                                     <path d="M6 0.63501V1.63501H0V0.63501H6Z" fill="white" />
                                 </svg></button>
                         </div>
                     </div>
-                    <button type="submit">Agregar al Carrito</button>
+                    <button class="item__submit" type="submit">Agregar al Carrito</button>
                 </form>
-                <p><a href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
+                <p class="item__promo"><a href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
             </article>
         </section><!--Fin Item-->
         <section class="slider container"><!--Inicio Slider-->
