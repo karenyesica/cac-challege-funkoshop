@@ -1,0 +1,90 @@
+/* EL CSS DEL SLIDER TIENE QUE QUEDAR AL FINAL, AMPARO PORFA HACE TODO EL RESTO DEL CSS ARRIBA <3 */
+
+/* SLIDER */
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-36);
+  margin: var(--spacing-68) auto;
+}
+
+.slider__title {
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  font-weight: 700;
+}
+
+.slider__items {
+  display: flex;
+  gap: var(--spacing-24);
+}
+
+.card-item__cover {
+  display: flex; /* para que no salte la caja contenedora al hacer hover */
+  position: relative; /* para que tome el absolute de los span */
+}
+
+.card-item__cover img {
+  animation: fade 0.7s;
+}
+
+.card-item__tag {
+  font-size: var(--font-xsmall);
+  font-weight: 500;
+  color: var(--light-font-solid);
+  background-color: var(--primary-solid);
+  padding: var(--spacing-8) var(--spacing-12);
+  position: absolute;
+  right: 0;
+}
+
+.card-item__img--back {
+  display: none;
+}
+
+/* Hover de imaágenes */
+.card-item__cover:hover .card-item__img--back {
+  display: block;
+}
+
+.card-item__cover:hover .card-item__img--front {
+  display: none;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.card-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  padding: var(--spacing-16);
+}
+
+.card-item__license {
+  font-size: var(--font-xsmall);
+  font-weight: 500;
+}
+
+.card-item__name {
+  font-size: var(--font-medium);
+  font-weight: 700;
+}
+
+.card-item__price {
+  font-size: var(--font-small);
+}
+
+.card-item__promo {
+  font-size: var(--font-xsmall);
+  font-weight: 700;
+  color: var(--secondary-solid);
+}
