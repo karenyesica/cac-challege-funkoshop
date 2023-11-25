@@ -1,4 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="icon" href="../../img/branding/isotype.svg" type="image/svg">
+    <title>Shop | Funkoshop</title>
+</head>
+
 <body>
+    <header><!-- Inicio Header -->
+        <div class="header">
+            <nav class="navbar container">
+                <picture class="navbar__logo">
+                    <a href="./index.html">
+                        <img src="../../img/branding/logo_light_horizontal.svg" alt="logo de funkoshop">
+                    </a>
+                </picture>
+                <ul class="navbar__menu">
+                    <li class="navbar__item with-submenu"><a class="navbar__link with-icon"
+                            href="../../pages/shop.html">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a href="" class="submenu__link">Funkos</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="" class="submenu__link">Remeras</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="" class="submenu__link">Llaveros</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item"><a class="navbar__link" href="../../pages/contacto.html">CONTACTO</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="../../pages/login.html">LOGIN</a></li>
+                    <li class="navbar__item"><a class="navbar__cart" href="../../pages/cart.html"><img
+                                src="../../img/icons/cart_icon.svg" alt="Icono de carrito"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header><!-- Fin Header -->
     <main>
         <section>
             <article>
@@ -118,15 +160,39 @@
                     </div>
                 </a>
             </article>
-      </section>
-      <section>
-            <button><</button>
-            <button>1</button>
-            <button>2</button>
-            <button>...</button>
-            <button>9</button>
-            <button>10</button>
-            <button>></button>
         </section>
+        <section>
+            <button>
+                << /button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>...</button>
+                    <button>9</button>
+                    <button>10</button>
+                    <button>></button>
+        </section>
+
     </main>
+    <footer>
+        <section>
+            <nav class="navbar container">
+                <ul>
+                    <li>
+                        <a class="navbar__link" href="./pages/shop.html">SHOP</a>
+                    </li>
+                    <li>
+                        <a class="navbar__link" href="./pages/login.html">LOGIN</a>
+                    </li>
+                    <li>
+                        <a class="navbar__link" href="./pages/contct.html">CONTACTO</a>
+                    </li>
+                </ul>
+                <picture>
+                    <img src="./img/branding/isotype.svg" alt="">
+                </picture>
+            </nav>
+        </section>
+        <p class="copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
