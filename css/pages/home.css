@@ -2,6 +2,74 @@
 
 /* MAIN */
 
+.banner {
+  background-image: url("../../img/funkos-banner.webp");
+  padding: var(--spacing-128);
+	background-position: top;
+	background-size: cover;
+	background-attatchment: fixed;
+	position: relative
+}
+
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+  align-items: start;
+  z-index: 2;
+  position: relative;
+}
+
+.banner__title {
+  font-family: var(--alternative-font);
+	font-size: var(--font-jumbo);
+	color: var(--light-font-solid);
+}
+
+.banner__text {
+	font-family: var(--alternative-font);
+	font-size: var(--font-medium);
+	color: var(--light-font-solid);
+} 
+
+.banner__link {
+	display: inline-block;
+	font-size: var(--font-medium);
+	background-color: var(--light-bg-solid);
+	padding: var (--spacing-12) var (--spacing-68);	
+	border-radius: 50px;
+	font-weight: 500;
+}
+
+/* MAIN COLECCIONES */
+
+.main__container {
+
+}
+
+.collection__container {
+
+}
+
+.collection__content {
+
+}
+
+.collection__title {
+
+}
+
+.collection__text {
+
+}
+
+.collection__link {
+
+}
+
+.collection__cover {
+
+}
 
 /* SLIDER */
 
