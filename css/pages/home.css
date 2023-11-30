@@ -1,18 +1,18 @@
 /* EL CSS DEL SLIDER TIENE QUE QUEDAR AL FINAL, AMPARO PORFA HACE TODO EL RESTO DEL CSS ARRIBA <3 */
 
-/* MAIN BANNER*/
+/* BANNER */
 
 .banner {
   background-image: url("../../img/funkos-banner.webp");
-  /*padding: var(--spacing-128);
-	background-position: top;
+  padding: var(--spacing-128);
+	background-position: bottom;
 	background-size: cover;
-	background-attatchment: fixed;
-	position: relative*/
+	background-attachment: fixed;
+	position: relative;
 }
 
 .banner__content {
-  /*display: flex;
+  display: flex;
   flex-direction: column;
   gap: var(--spacing-20);
   align-items: start;
@@ -21,75 +21,25 @@
 }
 
 .banner__title {
-  /*font-family: var(--alternative-font);
+  font-family: var(--alternative-font);
 	font-size: var(--font-jumbo);
-	color: var(--light-font-solid);*/
+	color: var(--light-font-solid);
 }
 
 .banner__text {
-	/*font-family: var(--alternative-font);
+	font-family: var(--alternative-font);
 	font-size: var(--font-medium);
-	color: var(--light-font-solid);*/
+	color: var(--light-font-solid);
+  padding-bottom: var(--spacing-36);
 } 
 
 .banner__link {
-	/*display: inline-block;
+	display: inline-block;
 	font-size: var(--font-medium);
 	background-color: var(--light-bg-solid);
 	padding: var(--spacing-12) var(--spacing-68);	
 	border-radius: 50px;
-	font-weight: 500;*/
-}
-
-/* MAIN */
-
-.main__container {
-  /*display: grid;*/
-}
-
-/* MAIN COLECCIONES */
-
-.collection__container {
-  /*display: grid;
-	grid-display-columns: repeat (2, 1fr);
-	align-items: center;
-	padding: var(--spacing-16) 0;*/
-}
-
-.collection__content {
-	/*display: flex;
-	flex-direction: column;
-	gap: var(--spacing-24);
-	align-items: start;*/
-}
-
-.collection__title {
-	/*font-family: var(--alternative-font);
-	font-size: var(--font-display);
-  font-weight: 500;*/
-}
-
-.collection__text {
-  /*font-family: var(--alternative-font);
-  font-size: var(--font-display);
-  font-weight: 500;
-  border-bottom: 2px solid var(--primary-solid);
-  padding-bottom: var(--spacing-20);*/
-}
-
-.collection__link {
-	/*display: inline-block;
-	font-size: var(--font-medium);
-	background-color: var(--dark-bg-solid);
-	color: var(--light-font-solid);
-	padding: var(--spacing-16) var(--spacing-36);
-	border-radius: 50px;
 	font-weight: 500;
-	transition: background .3s ease-in-out;*/
-}
-
-.collection__cover {
-  width: 600px;  
 }
 
 /* SLIDER */
