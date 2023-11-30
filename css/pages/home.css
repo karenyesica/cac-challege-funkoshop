@@ -17,7 +17,7 @@
   gap: var(--spacing-20);
   align-items: start;
   z-index: 2;
-  position: relative;*/
+  position: relative;
 }
 
 .banner__title {
@@ -46,7 +46,7 @@
 
 .collection__container {
   display: grid;
-  grid-display-columns: repeat (2, 1fr);
+  grid-template-columns: repeat (2, 1fr);
   align-items: center;
   padding: var(--spacing-16);
 }
@@ -82,8 +82,6 @@ padding-bottom: var(--spacing-20);
 	font-weight: 500;
 	transition: background .3s ease-in-out;
  }
-
-.collection__cover { }
 
 /* SLIDER */
 
