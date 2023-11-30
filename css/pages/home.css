@@ -1,14 +1,14 @@
 /* EL CSS DEL SLIDER TIENE QUE QUEDAR AL FINAL, AMPARO PORFA HACE TODO EL RESTO DEL CSS ARRIBA <3 */
 
-/* MAIN BANNER*/
+/* BANNER */
 
 .banner {
   background-image: url("../../img/funkos-banner.webp");
   padding: var(--spacing-128);
-	background-position: top;
+	background-position: bottom;
 	background-size: cover;
-	background-attatchment: fixed;
-	position: relative
+	background-attachment: fixed;
+	position: relative;
 }
 
 .banner__content {
@@ -17,7 +17,7 @@
   gap: var(--spacing-20);
   align-items: start;
   z-index: 2;
-  position: relative;
+  position: relative;*/
 }
 
 .banner__title {
@@ -30,45 +30,16 @@
 	font-family: var(--alternative-font);
 	font-size: var(--font-medium);
 	color: var(--light-font-solid);
+  padding-bottom: var(--spacing-36);
 } 
 
 .banner__link {
 	display: inline-block;
 	font-size: var(--font-medium);
 	background-color: var(--light-bg-solid);
-	padding: var (--spacing-12) var (--spacing-68);	
+	padding: var(--spacing-12) var(--spacing-68);	
 	border-radius: 50px;
 	font-weight: 500;
-}
-
-/* MAIN COLECCIONES */
-
-.main__container {
-
-}
-
-.collection__container {
-
-}
-
-.collection__content {
-
-}
-
-.collection__title {
-
-}
-
-.collection__text {
-
-}
-
-.collection__link {
-
-}
-
-.collection__cover {
-
 }
 
 /* SLIDER */
