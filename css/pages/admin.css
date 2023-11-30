@@ -1,3 +1,29 @@
 .searchtool__container {
-    color:aquamarine;
+    margin-top: 36px;
+    margin-right: 739px;
+    margin-bottom: 36px;
 }
+
+.searchtool__content {
+    display: flex;
+    align-items: center;
+}
+.searchtool__button {
+    border:none;
+    background: none;
+}
+
+.searchtool__image {
+    width: 42px;
+    height: 42px;
+}
+
+.searchtool__form {
+
+}
+
+input::placeholder {
+    font-size: var(--font-xsmall);
+    font-style: normal;
+    font-weight: 500;
+  }
