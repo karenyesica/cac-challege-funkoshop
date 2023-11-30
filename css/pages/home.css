@@ -45,6 +45,8 @@
 /* COLECCIONES */
 
 .collection__container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat (2, 1fr);
   align-items: center;
@@ -60,13 +62,13 @@
 
 .collection_title {
   font-family: var(--alternative-font);
-  font-size: var(--font-display);
+  font-size: var(--font-jumbo);
   font-weight: 500;
  }
 
 .collection__text { 
   font-family: var(--alternative-font);
-font-size: var(--font-display);
+font-size: var(--font-medium);
 font-weight: 500;
 border-bottom: 2px solid var(--primary-solid);
 padding-bottom: var(--spacing-20);
