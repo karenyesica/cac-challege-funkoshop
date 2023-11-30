@@ -14,6 +14,7 @@
 @import url(./pages/shop.css);
 @import url(./pages/item.css);
 @import url(./pages/shopping-cart.css);
+@import url(./pages/admin.css);
 
 /* ANIMATIONS */
 @keyframes fade {
