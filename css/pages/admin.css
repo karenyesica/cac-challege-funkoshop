@@ -72,10 +72,33 @@ input::placeholder {
 }
 
 .list__table__container { 
-    font-family: var(--base-font);
+
 }
 
 .list__table__heading {
-    font-weight: 500;
-    font-size: 50px;
+
+}
+
+.list__table__text {
+  text-align: right;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.96px;
+}
+
+.list__table__notext {
+  color:white;
+}
+
+.list__table__itemscolor {
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 253.523%; /* 60.845px */
+  letter-spacing: 0.96px;
 }
