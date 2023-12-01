@@ -1,0 +1,91 @@
+.register {
+  margin: var(--spacing-36) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-36);
+}
+
+.register__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-36);
+}
+
+.register__title {
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  font-weight: 700;
+}
+
+.register__description {
+  font-family: var(--alternative-font);
+  font-size: var(--font-xlarge);
+  font-weight: 500;
+  letter-spacing: 1.3px;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-36);
+}
+.form__field {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-12);
+}
+
+.form__label {
+  font-size: var(--font-large);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.form__input {
+  border: none;
+  border-bottom: 2px solid var(--primary-solid);
+  width: 209px;
+  font-size: var(--font-small);
+}
+.form__input:focus {
+  outline: none;
+  border: 2px solid var(--primary-solid);
+}
+
+.form__submission {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-36);
+}
+
+.form__submit {
+  font-size: var(--font-xsmall);
+  font-weight: 400;
+  padding: var(--spacing-12) var(--spacing-24);
+  background-color: var(--primary-solid);
+  color: var(--light-font-solid);
+  border: none;
+}
+
+.form__terms {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.form__terms input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.form__terms label {
+  font-size: var(--font-medium);
+  font-weight: 400;
+}
+
+.form__terms a {
+  color: var(--secondary-solid);
+}
