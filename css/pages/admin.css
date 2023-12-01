@@ -1,82 +1,80 @@
 .searchtool__container {
-    margin-top: 36px;
-    margin-right: 739px;
-    margin-bottom: 36px;
+  margin-top: 36px;
+  margin-right: 739px;
+  margin-bottom: 36px;
 }
 
 .searchtool__content {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .searchtool__button {
-    border:none;
-    background: none;
+  border: none;
+  background: none;
 }
 
 .searchtool__image {
-    width: 42px;
-    height: 42px;
+  width: 42px;
+  height: 42px;
 }
 
 .searchtool__form {
-
 }
 
+/* Cambiar forma de selección, es muy general el selector y esta rompiendo otras cosas
 input::placeholder {
-    font-size: var(--font-xsmall);
-    font-style: normal;
-    font-weight: 500;
-  }
+  font-size: var(--font-xsmall);
+  font-style: normal;
+  font-weight: 500;
+} */
 
-  .list__container {
+.list__container {
+}
 
-  }
+.list__content {
+  display: flex;
+  align-items: center;
+}
 
-  .list__content {
-    display: flex;
-    align-items: center;
-  }
+.list__title {
+  font-family: var(--alternative-font);
+  font-size: 42px;
+  line-height: normal;
+  letter-spacing: 1.68px;
+  margin-right: 386px;
+  margin-bottom: 34px;
+}
 
-  .list__title {
-    font-family: var(--alternative-font);
-    font-size: 42px;
-    line-height: normal;
-    letter-spacing: 1.68px;
-    margin-right: 386px;
-    margin-bottom: 34px;
-  }
-
-  .list__text {
-    text-align: right;
-    font-family: var(--base-font);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.96px;
-    margin-bottom: 44px;
-  }
+.list__text {
+  text-align: right;
+  font-family: var(--base-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.96px;
+  margin-bottom: 44px;
+}
 
 .list__button {
-    text-align: center;
-    font-family: var(--base-font);
-    width: 52px;
-    height: 52px;
-    font-size: 48px;
-    font-weight: 700;
-    color: white;
-    border: none;
-    background-color: #FF3333;
-    margin-left: 22px;
-    margin-bottom: 32.5px;
-    border-radius: 5px;
+  text-align: center;
+  font-family: var(--base-font);
+  width: 52px;
+  height: 52px;
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  background-color: #ff3333;
+  margin-left: 22px;
+  margin-bottom: 32.5px;
+  border-radius: 5px;
 }
 
-.list__table__container { 
+.list__table__container {
   margin-bottom: 36px;
 }
 
 .list__table__heading {
-
 }
 
 .list__table__text {
@@ -90,7 +88,7 @@ input::placeholder {
 }
 
 .list__table__notext {
-  color:white;
+  color: white;
 }
 
 .list__table__items {
