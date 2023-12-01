@@ -19,13 +19,13 @@
 }
 
 .searchtool__form {
-
 }
 
 input::placeholder {
     font-size: var(--font-xsmall);
     font-style: normal;
     font-weight: 500;
+    size: 90px;
   }
 
   .list__container {
