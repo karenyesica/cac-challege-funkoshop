@@ -11,6 +11,11 @@
   gap: var(--spacing-28);
 }
 
+.filters__title {
+  font-size: var(--font-large);
+  font-weight: 500;
+}
+
 .filters__search,
 .filters__order {
   display: flex;
@@ -18,9 +23,9 @@
   gap: var(--spacing-12);
 }
 
-.filters__title {
-  font-size: var(--font-large);
-  font-weight: 500;
+.filters__search input::placeholder,
+.filters__price div input::placeholder {
+  vertical-align: middle;
 }
 
 .filters__search input,
@@ -55,6 +60,7 @@ select {
   padding: 4px var(--spacing-8);
   text-align: center;
   width: 70px;
+  font-weight: 500;
 }
 
 .filters__checks {
