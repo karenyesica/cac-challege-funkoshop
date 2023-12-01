@@ -72,7 +72,7 @@ input::placeholder {
 }
 
 .list__table__container { 
-
+  margin-bottom: 36px;
 }
 
 .list__table__heading {
@@ -80,7 +80,7 @@ input::placeholder {
 }
 
 .list__table__text {
-  text-align: right;
+  text-align: left;
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
@@ -94,11 +94,19 @@ input::placeholder {
 }
 
 .list__table__items {
-  text-align: center;
+  text-align: left;
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: 253.523%; /* 60.845px */
   letter-spacing: 0.96px;
+}
+
+.list__table__buttons {
+  border: none;
+  background: none;
+  width: 34px;
+  height: 34px;
+  margin-left: 42px;
 }
