@@ -1,0 +1,42 @@
+.login {
+  margin: var(--spacing-36) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-28);
+}
+
+.login__title {
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 1.68px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-36);
+}
+
+.form__remember {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.form__remember input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.form__remember label {
+  font-size: var(--font-medium);
+  font-weight: 400;
+}
+
+.login .form__link {
+  font-size: var(--font-xsmall);
+  font-weight: 400;
+  text-align: center;
+}

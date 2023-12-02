@@ -17,13 +17,14 @@
   font-family: var(--alternative-font);
   font-size: var(--font-display);
   font-weight: 700;
+  letter-spacing: 1.68px;
 }
 
 .register__description {
   font-family: var(--alternative-font);
   font-size: var(--font-xlarge);
   font-weight: 500;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.28px;
 }
 
 .register__form {
@@ -86,6 +87,6 @@
   font-weight: 400;
 }
 
-.form__terms a {
+.form__link {
   color: var(--secondary-solid);
 }
