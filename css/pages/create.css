@@ -1,0 +1,5 @@
+.form__buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-36);
+}

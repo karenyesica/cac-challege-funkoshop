@@ -30,77 +30,61 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>CREAR NUEVO ITEM</h1>
-        <section>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Categoría:">Categoría:</label>
-                    <select name="Categoría:">
-                        <option></option>
-                    </select>
-                    <label for="Licencia:">Licencia:</label>
-                    <select name="Licencia:">
-                        <option></option>
-                    </select>
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Nombre del producto:">Nombre del producto:</label>
-                    <input type="text" placeholder="Kakashi Hatake Shippuden Saga">
-                </form>
-            </article>
-            <article>
-                <textarea placeholder="Descripción del producto"></textarea>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="SKU:">SKU:</label>
-                    <input type="text" placeholder="SSK111AB001">
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Precio:">Precio:</label>
-                    <input type="text" placeholder="$0.000,00">
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Stock:">Stock:</label>
-                    <input type="text" placeholder="0">
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Descuento:">Descuento:</label>
-                    <input type="text" placeholder="0%">
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Cuotas:">Cuotas:</label>
-                    <select name="Cuotas:">
-                        <option selected>3 cuotas sin interés</option>
-                        <option>6 cuotas sin interés</option>
-                        <option>12 cuotas sin interés</option>
-                    </select>
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Imágenes:">Imágenes:</label>
-                    <input type="file" value="Elegir archivos">
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <input type="button" value="Agregar Producto">
-                    <input type="button" value="Limpiar">
-                </form>
-            </article>
-        </section>
+    <main class="edit container">
+        <h1 class="edit__title">EDITAR ITEM</h1>
+        <form class="edit__form" action="" method="POST" target="_self" enctype="application/x-www-form-urlencoded">
+            <div class="form__field">
+                <label class="form__label" for="category">Categoría:</label>
+                <select class="form__select--category" id="category" name="category" required>
+                    <option value="" disabled selected hidden>Seleccionar</option>
+                    <option value="figuras">Figuras</option>
+                    <option value="remeras">Remeras</option>
+                    <option value="llaveros">Llaveros</option>
+                </select>
+                <label class="form__label" for="license">Licencia:</label>
+                <select class="form__select--license" id="license" name="license" required>
+                    <option value="" disabled selected hidden>Seleccionar</option>
+                    <option value="harry potter">Harry Potter</option>
+                    <option value="star wars">Star Wars</option>
+                    <option value="pokemón">Pokemón</option>
+                </select>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="productName">Nombre del producto:</label>
+                <input class="form__input--product" type="text" name="productName" id="productName"
+                    placeholder="Luna Lovegood Lion Mask" required>
+            </div>
+            <textarea class="form__textarea--edit" name="productDescription" id="" rows="7"
+                placeholder="Descripción del producto" required></textarea>
+            <div class="form__field">
+                <label class="form__label" for="sku">SKU:</label>
+                <input class="form__input--sku" type="text" name="sku" id="sku" placeholder="SSK111AB001" required>
+                <label class="form__label" for="price">Precio:</label>
+                <input class="form__input--price" type="number" name="price" id="price" placeholder="$ 0.000,00"
+                    step="0.01" min="0" required>
+                <label class="form__label" for="stock">Stock:</label>
+                <input class="form__input--stock" type="number" name="stock" id="stock" placeholder="0" min="0"
+                    required>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="discount">Descuento:</label>
+                <input class="form__input--discount" type="number" name="discount" id="discount" placeholder="0%">
+                <label class="form__label" for="fees">Cuotas:</label>
+                <select class="form__select--fees" id="fees" name="fees">
+                    <option>3 cuotas sin interés</option>
+                    <option>6 cuotas sin interés</option>
+                    <option>12 cuotas sin interés</option>
+                </select>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="productImage">Imágenes:</label>
+                <input class="form__input-img" type="file" name="productImage" id="productImage" required>
+            </div>
+            <div class="form__buttons">
+                <input class="form__submit" type="submit" value="Agregar Producto">
+                <input class="form__submit" type="reset" value="Limpiar Producto">
+            </div>
+        </form>
     </main>
     <footer>
         <section>
