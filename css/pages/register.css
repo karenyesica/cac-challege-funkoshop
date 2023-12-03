@@ -35,6 +35,7 @@
 .form__field {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: var(--spacing-12);
 }
 
@@ -48,6 +49,7 @@
   border: none;
   border-bottom: 2px solid var(--primary-solid);
   width: 209px;
+  font-family: var(--base-font);
   font-size: var(--font-small);
 }
 .form__input:focus {
@@ -63,6 +65,7 @@
 }
 
 .form__submit {
+  font-family: var(--base-font);
   font-size: var(--font-xsmall);
   font-weight: 400;
   padding: var(--spacing-12) var(--spacing-24);

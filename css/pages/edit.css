@@ -1,0 +1,99 @@
+.edit__title {
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 1.68px;
+  margin: var(--spacing-36) auto;
+}
+
+.edit__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-36);
+  margin-bottom: var(--spacing-36);
+}
+
+.edit__form .form__field {
+  justify-content: flex-start;
+  gap: var(--spacing-12);
+}
+
+.form__select--category,
+.form__select--license {
+  border-radius: 6px;
+  border: 2px solid var(--dark-solid);
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
+  padding: var(--spacing-8);
+  width: 243px;
+  margin-right: var(--spacing-36);
+}
+.form__input--product {
+  width: 295px;
+  border: none;
+  border-bottom: 2px solid var(--primary-solid);
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
+}
+.form__textarea--edit {
+  font-family: var(--base-font);
+  font-size: var(--font-large);
+  max-width: 1012px;
+  padding: 1rem;
+}
+
+.form__input--sku,
+.form__input--price {
+  width: 130px;
+  border: none;
+  border-bottom: 2px solid var(--primary-solid);
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
+  margin-right: var(--spacing-36);
+}
+
+.form__input--stock,
+.form__input--discount {
+  width: 55px;
+  border: none;
+  border-bottom: 2px solid var(--primary-solid);
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
+  margin-right: var(--spacing-36);
+  text-align: center;
+}
+
+.form__input--product:focus,
+.form__input--sku:focus,
+.form__input--price:focus,
+.form__input--stock:focus,
+.form__input--discount:focus {
+  outline: none;
+  border: 2px solid var(--primary-solid);
+}
+.form__select--fees {
+  border-radius: 6px;
+  border: 2px solid var(--dark-solid);
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
+  padding: var(--spacing-8);
+  width: 346px;
+  margin-right: var(--spacing-36);
+}
+
+.form__picture {
+  max-width: 150px;
+  text-align: center;
+}
+
+.form__picture img {
+  border-bottom: 1px solid var(--primary-solid);
+}
+.form__picture span {
+  font-family: var(--alternative-font);
+  font-size: var(--font-medium);
+  font-weight: 500;
+}
+.edit__form .form__submit {
+  align-self: flex-start;
+}
