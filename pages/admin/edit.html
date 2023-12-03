@@ -30,83 +30,68 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>EDITAR ITEM</h1>
-        <section>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Categoría:">Categoría:</label>
-                    <select name="Categoría:">
-                        <option selected>Figuras</option>
-                    </select>
-                    <label for="Licencia:">Licencia:</label>
-                    <select name="Licencia:">
-                        <option selected>Harry Potter</option>
-                    </select>
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Nombre del producto:">Nombre del producto:</label>
-                    <input type="text" placeholder="Kakashi Hatake Shippuden Saga">
-                </form>
-            </article>
-            <article>
-                <textarea
-                    placeholder="Descripción del producto">Figura Funko coleccionable de Harry Potter de la saga Harry Potter.</textarea>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="SKU:">SKU:</label>
-                    <input type="text" placeholder="SSK111AB012">
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Precio:">Precio:</label>
-                    <input type="text" placeholder="$1.799,00">
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Stock:">Stock:</label>
-                    <input type="text" placeholder="10">
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Descuento:">Descuento:</label>
-                    <input type="text" placeholder="10%">
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Cuotas:">Cuotas:</label>
-                    <select name="Cuotas:">
-                        <option>3 cuotas sin interés</option>
-                        <option selected>6 cuotas sin interés</option>
-                        <option>12 cuotas sin interés</option>
-                    </select>
-                </form>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <label for="Imágenes:">Imágenes:</label>
-                    <input type="file" value="Elegir archivos">
-                </form>
-            </article>
-            <article>
-                <picture>
-                    <img src="../../img/harry-potter/harry-box.webp" alt="Imagen frontal de Funko de Harry Potter">
-                    <img src="../../img/harry-potter/harry-1.webp" alt="Imagen de caja de Funko de Harry Potter">
+    <main class="edit container">
+        <h1 class="edit__title">EDITAR ITEM</h1>
+        <form class="edit__form" action="" method="POST" target="_self" enctype="application/x-www-form-urlencoded">
+            <div class="form__field">
+                <label class="form__label" for="category">Categoría:</label>
+                <select class="form__select--category" id="category" name="category" required>
+                    <option selected>Figuras</option>
+                    <option>Remeras</option>
+                    <option>Llaveros</option>
+                </select>
+                <label class="form__label" for="license">Licencia:</label>
+                <select class="form__select--license" id="license" name="license" required>
+                    <option selected>Harry Potter</option>
+                    <option>Star Wars</option>
+                    <option>Pokemón</option>
+                </select>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="productName">Nombre del producto:</label>
+                <input class="form__input--product" type="text" name="productName" id="productName"
+                    placeholder="Luna Lovegood Lion Mask" required>
+            </div>
+            <textarea class="form__textarea--edit" name="productDescription" id="" rows="7"
+                placeholder="Descripción del producto"
+                required>Figura Funko coleccionable de Luna Lovegood Lion Mask de la saga Harry Potter.</textarea>
+            <div class="form__field">
+                <label class="form__label" for="sku">SKU:</label>
+                <input class="form__input--sku" type="text" name="sku" id="sku" placeholder="SSK111AB012" required>
+                <label class="form__label" for="price">Precio:</label>
+                <input class="form__input--price" type="number" name="price" id="price" placeholder="$1.799,00"
+                    step="0.01" min="0" required>
+                <label class="form__label" for="stock">Stock:</label>
+                <input class="form__input--stock" type="number" name="stock" id="stock" placeholder="10" min="0"
+                    required>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="discount">Descuento:</label>
+                <input class="form__input--discount" type="number" name="discount" id="discount" placeholder="10%">
+                <label class="form__label" for="fees">Cuotas:</label>
+                <select class="form__select--fees" id="fees" name="fees">
+                    <option>3 cuotas sin interés</option>
+                    <option selected>6 cuotas sin interés</option>
+                    <option>12 cuotas sin interés</option>
+                </select>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="productImage">Imágenes:</label>
+                <input class="form__input-img" type="file" name="productImage" id="productImage" required>
+            </div>
+            <div class="form__field">
+                <picture class="form__picture">
+                    <img src="../../img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Lovegood">
+                    <span>Frente</span>
                 </picture>
-            </article>
-            <article>
-                <form action="" method="get" target="_self" enctype="text/plain">
-                    <input type="button" value="Modificar Producto">
-                </form>
-            </article>
-        </section>
+                <picture class="form__picture">
+                    <img src="../../img/harry-potter/luna-box.webp"
+                        alt="Figura coleccionable Funko de Luna Lovegood en caja">
+                    <span>Dorso</span>
+                </picture>
+            </div>
+            <input class="form__submit" type="submit" value="Modificar Producto">
+        </form>
     </main>
     <footer>
         <section>
