@@ -1,5 +1,5 @@
 header {
-  padding: var(--spacing-36);
+  padding: var(--spacing-36) 0; 
 }
 .navbar {
   display: flex;
