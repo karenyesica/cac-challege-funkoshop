@@ -72,6 +72,12 @@
   background-color: var(--primary-solid);
   color: var(--light-font-solid);
   border: none;
+  cursor: pointer;
+}
+
+.form__submit:hover {
+  background-color: var(--secondary-solid);
+  transition: background 0.2s ease-in-out;
 }
 
 .form__terms {
