@@ -1,12 +1,12 @@
 .searchtool__container {
   margin-top: 36px;
-  margin-right: 739px;
   margin-bottom: 36px;
 }
 
 .searchtool__content {
   display: flex;
   align-items: center;
+  gap: var(--spacing-20);
 }
 .searchtool__button {
   border: none;
@@ -18,22 +18,28 @@
   height: 42px;
 }
 
-.searchtool__form {
-}
-
-/* Cambiar forma de selección, es muy general el selector y esta rompiendo otras cosas
-input::placeholder {
-  font-size: var(--font-xsmall);
-  font-style: normal;
+.searchtool__input {
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
   font-weight: 500;
-} */
-
-.list__container {
+  width: 530px;
+  padding: var(--spacing-8) var(--spacing-8);
+  border: 2px solid var(--dark-solid);
+  border-radius: 6px;
 }
 
 .list__content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-24);
+  max-width: 1120px;
+}
+
+.list__content div {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
 }
 
 .list__title {
@@ -41,45 +47,31 @@ input::placeholder {
   font-size: 42px;
   line-height: normal;
   letter-spacing: 1.68px;
-  margin-right: 386px;
-  margin-bottom: 34px;
 }
 
 .list__text {
-  text-align: right;
   font-family: var(--base-font);
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.96px;
-  margin-bottom: 44px;
 }
 
-.list__button {
-  text-align: center;
-  font-family: var(--base-font);
-  width: 52px;
-  height: 52px;
-  font-size: 48px;
-  font-weight: 700;
-  color: white;
-  border: none;
-  background-color: #ff3333;
-  margin-left: 22px;
-  margin-bottom: 32.5px;
-  border-radius: 5px;
+.list__table {
+  max-width: 1126px;
+  margin: 0 auto;
 }
 
 .list__table__container {
   margin-bottom: 36px;
 }
 
-.list__table__heading {
+.list__table__headers {
+  height: 61px;
 }
 
 .list__table__text {
   text-align: left;
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -93,7 +85,6 @@ input::placeholder {
 
 .list__table__items {
   text-align: left;
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -101,10 +92,9 @@ input::placeholder {
   letter-spacing: 0.96px;
 }
 
-.list__table__buttons {
-  border: none;
-  background: none;
+.list__table__buttons img {
   width: 34px;
   height: 34px;
   margin-left: 42px;
+  cursor: pointer;
 }

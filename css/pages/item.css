@@ -47,6 +47,7 @@
 }
 
 .item__input {
+  font-family: var(--base-font);
   font-size: var(--font-large);
   text-align: center;
   width: 109px;

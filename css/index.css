@@ -15,7 +15,7 @@
 @import url(./pages/home.css);
 @import url(./pages/shop.css);
 @import url(./pages/item.css);
-@import url(./pages/shopping-cart.css);
+@import url(./pages/cart.css);
 @import url(./pages/admin.css);
 @import url(./pages/create.css);
 @import url(./pages/edit.css);
@@ -32,8 +32,3 @@
     opacity: 1;
   }
 }
-
-/*En index solo va la importación de los css de las páginas, 
-cada CSS se trabaja en su hoja de estilos de página.
-Para que funcione el CSS en cada pagína tienen que hacer link a este index 
-<link rel="stylesheet" href="../../css/index.css"> (chequear ruta)*/

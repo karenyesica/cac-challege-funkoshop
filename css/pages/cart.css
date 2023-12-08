@@ -199,6 +199,7 @@
   width: 572px;
   background-color: var(--primary-solid);
   color: var(--light-font-solid);
+  font-family: var(--base-font);
   font-size: var(--font-xlarge);
   font-weight: 700;
   border: none;
@@ -209,105 +210,4 @@
 .summary__pay:hover {
   background-color: var(--secondary-solid);
   transition: background 0.2s ease-in-out;
-}
-
-/*EMANUEL*/
-
-.table__resume__container {
-  align-self: end;
-  margin-top: 4.25rem;
-  /* justify-self: end; */
-}
-
-.table__resume__total {
-  box-sizing: border-box;
-  width: 35.75rem;
-  border-radius: 10px;
-  background: #fafaff;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-
-  display: inline-flex;
-  padding: 1.5rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-}
-
-.table__resume__total__elements {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.border__top {
-  border-top: 2px solid #f33;
-}
-
-.table__resume__total__importantext {
-  color: #000;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.table__resume__total__prices {
-  color: #747474;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.table__resume__button__pay {
-  width: 100%;
-  height: 4.25rem;
-  background: #f33;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2.75rem;
-}
-
-.table__resume__button__pay a {
-  text-decoration: none;
-  color: #fff;
-  color: #fff;
-  font-family: Inter;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-@media (max-width: 768px) {
-  .main__cart {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: stretch;
-    width: 100%;
-
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 8rem;
-    padding-top: 8rem;
-    /* margin-left: auto;
-        margin-right: auto; */
-  }
-
-  .table__product__container {
-    padding-right: 1rem;
-    padding-left: 0.625rem;
-  }
-
-  .table__resume__container {
-    padding-right: 1rem;
-    padding-left: 0.625rem;
-  }
 }

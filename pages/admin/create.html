@@ -31,7 +31,7 @@
         </nav>
     </header>
     <main class="edit container">
-        <h1 class="edit__title">EDITAR ITEM</h1>
+        <h1 class="edit__title">CREAR NUEVO ITEM</h1>
         <form class="edit__form" action="" method="POST" target="_self" enctype="application/x-www-form-urlencoded">
             <div class="form__field">
                 <label class="form__label" for="category">Categoría:</label>
@@ -69,8 +69,9 @@
             <div class="form__field">
                 <label class="form__label" for="discount">Descuento:</label>
                 <input class="form__input--discount" type="number" name="discount" id="discount" placeholder="0%">
-                <label class="form__label" for="fees">Cuotas:</label>
-                <select class="form__select--fees" id="fees" name="fees">
+                <label class="form__label" for="dues">Cuotas:</label>
+                <select class="form__select--dues" id="dues" name="dues">
+                    <option>Sin cuotas</option>
                     <option>3 cuotas sin interés</option>
                     <option>6 cuotas sin interés</option>
                     <option>12 cuotas sin interés</option>
@@ -82,7 +83,7 @@
             </div>
             <div class="form__buttons">
                 <input class="form__submit" type="submit" value="Agregar Producto">
-                <input class="form__submit" type="reset" value="Limpiar Producto">
+                <input class="form__submit" type="reset" value="Limpiar">
             </div>
         </form>
     </main>
@@ -91,16 +92,16 @@
             <nav class="navbar container">
                 <ul>
                     <li>
-                        <a class="navbar__link" href="./pages/shop.html">SHOP</a>
+                        <a class="navbar__link" href="../shop/shop.html">SHOP</a>
                     </li>
                     <li>
-                        <a class="navbar__link" href="./pages/register.html">REGISTRARSE</a>
+                        <a class="navbar__link" href="./register.html">REGISTRARSE</a>
                     </li>
                     <li>
-                        <a class="navbar__link" href="./pages/login.html">INGRESAR</a>
+                        <a class="navbar__link" href="./login.html">INGRESAR</a>
                     </li>
                     <li>
-                        <a class="navbar__link" href="./pages/contct.html">CONTACTO</a>
+                        <a class="navbar__link" href="../shop/contact.html">CONTACTO</a>
                     </li>
                 </ul>
                 <picture>

@@ -4,11 +4,12 @@
   margin: var(--spacing-68) auto;
 }
 
-/* AASIDE */
+/* ASIDE */
 .shop__filters {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-28);
+  max-width: 243px;
 }
 
 .filters__title {
@@ -32,6 +33,7 @@
 .filters__order select {
   border-radius: 6px;
   border: 2px solid var(--dark-solid);
+  font-family: var(--base-font);
   font-size: var(--font-medium);
   padding: var(--spacing-8);
 }
@@ -56,6 +58,7 @@ select {
 .filters__price input {
   border-radius: 6px;
   border: 2px solid var(--dark-solid);
+  font-family: var(--base-font);
   font-size: var(--font-medium);
   padding: 4px var(--spacing-8);
   text-align: center;
@@ -120,6 +123,24 @@ select {
   justify-content: center;
 }
 
+.pagination__link:nth-child(1) {
+  background-color: var(--dark-300);
+  border: none;
+}
+
+.pagination__link:nth-child(2) {
+  color: var(--primary-solid);
+  border-color: var(--primary-solid);
+}
+
 .pagination__link iconify-icon {
-  color: var(--dark-300);
+  color: #c4cdd5;
+}
+
+.pagination__link:hover,
+.pagination__link iconify-icon:hover {
+  background-color: var(--primary-solid);
+  color: var(--light-font-solid);
+  border-color: var(--light-font-solid);
+  transition: background 0.2s ease-in-out;
 }
