@@ -1,11 +1,11 @@
 const express = require('express');
-
+const authControllers = require('./controllers/authController');
 const router = express.Router();
 
-router.get('/auth/login', (req, res) => res.send('Esta es la vista de Iniciar sesión'));
-router.post('/auth/login', (req, res) => res.send('Esta es la vista de Iniciar sesión'));
-router.get('/auth/register', (req, res) => res.send('Esta es la vista de Registrarse'));
-router.post('/auth/register', (req, res) => res.send('Esta es la vista de Registrarse'));
-router.get('/auth/logout', (req, res) => res.send('Esta es la vista de Salir'));
+router.get('/auth/login', authControllers.login);
+router.post('/auth/login', authControllers.login);
+router.get('/auth/register', authControllers.register);
+router.post('/auth/register', authControllers.register);
+router.get('/auth/logout', authControllers.logout);
 
 module.exports = router;
