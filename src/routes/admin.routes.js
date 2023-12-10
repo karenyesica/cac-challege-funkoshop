@@ -1,5 +1,5 @@
 const express = require('express');
-const adminControllers = require('./controllers/adminController');
+const adminControllers = require('../controllers/adminController');
 const router = express.Router();
 
 router.get('/admin', adminControllers.admin);
