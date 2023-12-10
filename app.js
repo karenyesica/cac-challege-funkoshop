@@ -11,8 +11,8 @@ const PORT = 3001;
 app.use(express.static('public'));
 
 app.use('/', mainRoutes);
-app.use('/', shopRoutes);
-app.use('/', adminRoutes);
-app.use('/', authRoutes);
+app.use('/shop', shopRoutes);
+app.use('/admin', adminRoutes);
+app.use('/auth', authRoutes);
 
 app.listen(PORT, () => console.log(`Aplicación corriendo en http://localhost:${PORT}`));
