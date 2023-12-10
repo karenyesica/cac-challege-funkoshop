@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const methodOverride = require("method-override");
 
 /* Routes imports*/
@@ -11,10 +12,18 @@ const authRoutes = require("./src/routes/auth.routes");
 
 const PORT = 3001;
 
-app.use(express.static("public"));
-app.use(express.urlencoded());
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "./src/views"));
+
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 app.use(express.json());
 app.use(methodOverride("_method"));
+
+app.use(express.static("public"));
 
 app.use("/", mainRoutes);
 app.use("/shop", shopRoutes);
