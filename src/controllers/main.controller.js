@@ -1,5 +1,5 @@
 const mainControllers = {
-  home: (req, res) => {
+  homeView: (req, res) => {
     res.render("index");
   },
   contact: (req, res) => res.send("Ruta para Contacto"),
