@@ -14,18 +14,23 @@
         <main class="container">
             <section class="item"><!--Inicio Item-->
                 <picture class="item__img card-item__cover">
-                    <img class="card-item__img--front" src="../../img/star-wars/baby-yoda-1.webp"
-                        alt="   Figura coleccionable Funko de la serie The Mandalorian">
-                    <img class="card-item__img--back" src="../../img/star-wars/baby-yoda-box.webp"
-                        alt="   Figura coleccionable Funko de la serie The Mandalorian en caja">
+                    <img class="card-item__img--front" src="<%= item.img_front %>"
+                        alt="<%= item.product_description %>">
+                    <img class="card-item__img--back" src="<%= item.img_back %>"
+                        alt="<%= item.product_description %> en caja">
                 </picture>
                 <article class="item__content">
-                    <p class="item__license">STAR WARS</p>
-                    <h3 class="item__name">BABY YODA BLUEBALL</h3>
-                    <p class="item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga,
-                        edición
-                        limitada.</p>
-                    <p class="item__price">$ 1799,99</p>
+                    <p class="item__license">
+                        <%= item.licence_name %>
+                    </p>
+                    <h3 class="item__name">
+                        <%= item.product_name %>
+                    </h3>
+                    <p class="item__description">
+                        <%= item.product_description %>
+                    </p>
+                    <p class="item__price">$ <%= item.product_price %>
+                    </p>
                     <form class="item__cart" method="POST" enctype="application/x-www-form-urlencoded" action="">
                         <div>
                             <input class="item__input" type="text" name="quantity" id="quantity" placeholder="0"
@@ -47,7 +52,7 @@
                         </div>
                         <button class="item__submit" type="submit">Agregar al Carrito</button>
                     </form>
-                    <p class="item__promo"><a href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
+                    <p class="item__promo"><a href="#">Ver métodos de pago</a> - <%= item.dues %> CUOTAS SIN INTERÉS</p>
                 </article>
             </section><!--Fin Item-->
             <section class="slider container glide"><!--Inicio Slider-->
