@@ -181,19 +181,23 @@
 .card-item__license {
   font-size: var(--font-xsmall);
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .card-item__name {
   font-size: var(--font-medium);
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .card-item__price {
   font-size: var(--font-small);
+  text-transform: uppercase;
 }
 
 .card-item__promo {
   font-size: var(--font-xsmall);
   font-weight: 700;
   color: var(--secondary-solid);
+  text-transform: uppercase;
 }
