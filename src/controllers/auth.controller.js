@@ -3,14 +3,14 @@ const path = require("path");
 const authControllers = {
   loginView: (req, res) => {
     res.render(path.resolve(__dirname, "../views/auth/login.ejs"), {
-      isLogged: false,
+      isLogged: true,
     });
   },
   doLogin: (req, res) =>
     res.send("Ruta para enviar los datos del fomulario para Iniciar Sesión"),
   registerView: (req, res) => {
     res.render(path.resolve(__dirname, "../views/auth/register.ejs"), {
-      isLogged: false,
+      isLogged: true,
     });
   },
   doRegister: (req, res) =>
