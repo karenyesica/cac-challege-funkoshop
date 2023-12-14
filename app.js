@@ -12,8 +12,12 @@ const authRoutes = require("./src/routes/auth.routes");
 
 const PORT = 3001;
 
+/* Configuración del Template Engine - EJS */
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./src/views"));
+
+/* Parsea los datos recibidos por POST */
 
 app.use(
   express.urlencoded({
@@ -21,9 +25,16 @@ app.use(
   })
 );
 app.use(express.json());
+
+/* Override para habilitar métodos PUT y DELETE */
+
 app.use(methodOverride("_method"));
 
+/* Carpeta de archivos estáticos */
+
 app.use(express.static("public"));
+
+/* Rutas de la aplicación */
 
 app.use("/", mainRoutes);
 app.use("/shop", shopRoutes);

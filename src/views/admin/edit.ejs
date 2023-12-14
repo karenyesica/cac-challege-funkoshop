@@ -33,17 +33,16 @@
                 <div class="form__field">
                     <label class="form__label" for="productName">Nombre del producto:</label>
                     <input class="form__input--product" type="text" name="productName" id="productName"
-                        placeholder="Luna Lovegood Lion Mask" required>
+                        value="<%= product.product_name %>" required>
                 </div>
                 <textarea class="form__textarea--edit" name="productDescription" id="" rows="7"
-                    placeholder="Descripción del producto"
-                    required>Figura Funko coleccionable de Luna Lovegood Lion Mask de la saga Harry Potter.</textarea>
+                    required><%= product.product_description %></textarea>
                 <div class="form__field">
                     <label class="form__label" for="sku">SKU:</label>
-                    <input class="form__input--sku" type="text" name="sku" id="sku" placeholder="SSK111AB001" required>
+                    <input class="form__input--sku" type="text" name="sku" id="sku" value="<%= product.sku %>" required>
                     <label class="form__label" for="price">Precio:</label>
                     <input class="form__input--price" type="number" name="price" id="price" placeholder="$ 0.000,00"
-                        step="0.01" min="0" required>
+                        step="0.01" min="0" value="<%= product.price %>" required>
                     <label class="form__label" for="stock">Stock:</label>
                     <input class="form__input--stock" type="number" name="stock" id="stock" placeholder="0" min="0"
                         required>
@@ -65,12 +64,11 @@
                 </div>
                 <div class="form__field">
                     <picture class="form__picture">
-                        <img src="../../img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Lovegood">
+                        <img src="/img<%= product.image_front %>" alt="<%= product.product_description %>">
                         <span>Frente</span>
                     </picture>
                     <picture class="form__picture">
-                        <img src="../../img/harry-potter/luna-box.webp"
-                            alt="Figura coleccionable Funko de Luna Lovegood en caja">
+                        <img src="/img<%= product.image_back %>" alt="<%= product.product_description %> en caja">
                         <span>Dorso</span>
                     </picture>
                 </div>
