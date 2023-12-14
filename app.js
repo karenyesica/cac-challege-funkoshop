@@ -10,6 +10,8 @@ const shopRoutes = require("./src/routes/shop.routes");
 const adminRoutes = require("./src/routes/admin.routes");
 const authRoutes = require("./src/routes/auth.routes");
 
+/* Puerto de la aplicación */
+
 const PORT = 3001;
 
 /* Configuración del Template Engine - EJS */
@@ -34,12 +36,20 @@ app.use(methodOverride("_method"));
 
 app.use(express.static("public"));
 
-/* Rutas de la aplicación */
+/* Middleware a las rutas */
 
 app.use("/", mainRoutes);
 app.use("/shop", shopRoutes);
 app.use("/admin", adminRoutes);
 app.use("/auth", authRoutes);
+
+/* Middleware de error 404 */
+
+app.use((req, res) => {
+  res.status(404).send("¡Ups! Página no encontrada");
+});
+
+/* Método para indicar que puerto tiene que escuchar y correr el server*/
 
 app.listen(PORT, () =>
   console.log(`Aplicación corriendo en http://localhost:${PORT}`)
