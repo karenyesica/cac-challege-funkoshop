@@ -57,14 +57,14 @@
                                 <td class="list__table__items">
                                     <%= product.category_name %>
                                 </td>
-                                <td>
-                                    <a href="/admin/edit/<%= product.product_id %>" class="list__table__buttons">
+                                <td class="list__table__buttons">
+                                    <a href="/admin/edit/<%= product.product_id %>">
                                         <img src="../../img/icons/edit_pencil.svg" alt="Ícono de lápiz para editar">
                                     </a>
-                                    <a href="" class="list__table__buttons">
+                                    <form action="" method="POST">
                                         <img src="../../img/icons/delete_trash.svg"
                                             alt="Ícono de papelero para eliminar">
-                                    </a>
+                                    </form>
                                 </td>
                             </tr>
                             <% }); %>

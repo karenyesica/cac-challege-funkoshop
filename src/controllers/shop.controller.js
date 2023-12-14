@@ -11,8 +11,10 @@ const shopControllers = {
     });
   },
   itemView: async (req, res) => {
-    const itemId = req.params.id;
-    const [item] = await getOne(itemId);
+    //const itemId = req.params.id;
+    const { id } = req.params;
+    //const [item] = await getOne(itemId);
+    const [item] = await getOne({ product_id: id });
     res.render(path.resolve(__dirname, "../views/shop/item.ejs"), {
       isLogged: false,
       item,

@@ -13,7 +13,7 @@
     <%- include ('../partials/header') %>
         <main class="edit container">
             <h1 class="edit__title">EDITAR ITEM</h1>
-            <form class="edit__form" action="" method="POST" target="_self" enctype="application/x-www-form-urlencoded">
+            <form class="edit__form" action="" method="GET" target="_self" enctype="application/x-www-form-urlencoded">
                 <div class="form__field">
                     <label class="form__label" for="category">Categoría:</label>
                     <select class="form__select--category" id="category" name="category" required>
@@ -40,16 +40,17 @@
                 <div class="form__field">
                     <label class="form__label" for="sku">SKU:</label>
                     <input class="form__input--sku" type="text" name="sku" id="sku" value="<%= product.sku %>" required>
-                    <label class="form__label" for="price">Precio:</label>
-                    <input class="form__input--price" type="number" name="price" id="price" placeholder="$ 0.000,00"
-                        step="0.01" min="0" value="<%= product.price %>" required>
+                    <label class="form__label" for="price">Precio: $</label>
+                    <input class="form__input--price" type="number" name="price" id="price" step="0.01" min="0"
+                        value="<%= product.price %>" required>
                     <label class="form__label" for="stock">Stock:</label>
-                    <input class="form__input--stock" type="number" name="stock" id="stock" placeholder="0" min="0"
-                        required>
+                    <input class="form__input--stock" type="number" name="stock" id="stock" min="0"
+                        value="<%= product.stock %>" required>
                 </div>
                 <div class="form__field">
                     <label class="form__label" for="discount">Descuento:</label>
-                    <input class="form__input--discount" type="number" name="discount" id="discount" placeholder="0%">
+                    <input class="form__input--discount" type="text" name="discount" id="discount"
+                        value="<%= product.discount %> %">
                     <label class="form__label" for="dues">Cuotas:</label>
                     <select class="form__select--dues" id="dues" name="dues">
                         <option>Sin cuotas</option>

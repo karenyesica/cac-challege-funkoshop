@@ -16,11 +16,11 @@ const getAll = async () => {
   }
 };
 
-const getOne = async (id) => {
+const getOne = async (params) => {
   try {
     const [rows, info] = await conn.query(
       "SELECT product.*, category.category_name, licence.licence_name FROM (product LEFT JOIN category ON product.category_id = category.category_id) LEFT JOIN licence ON product.licence_id = licence.licence_id WHERE ?;",
-      id
+      params
     );
     return rows;
   } catch (error) {
