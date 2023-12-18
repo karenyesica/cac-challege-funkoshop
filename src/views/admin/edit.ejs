@@ -17,17 +17,19 @@
                 <div class="form__field">
                     <label class="form__label" for="category">Categoría:</label>
                     <select class="form__select--category" id="category" name="category" required>
-                        <option value="" disabled selected hidden>Seleccionar</option>
-                        <option value="figuras" selected>Figuras</option>
-                        <option value="remeras">Remeras</option>
-                        <option value="llaveros">Llaveros</option>
+                        <% categories.forEach(category=> {%>
+                            <option <% if (product.category_id===category.category_id) {%> selected <%} %> value="<%=
+                                        category.category_name %>"> <%= category.category_name %>
+                            </option>
+                            <%}); %>
                     </select>
                     <label class="form__label" for="license">Licencia:</label>
                     <select class="form__select--license" id="license" name="license" required>
-                        <option value="" disabled selected hidden>Seleccionar</option>
-                        <option value="harry potter" selected>Harry Potter</option>
-                        <option value="star wars">Star Wars</option>
-                        <option value="pokemón">Pokemón</option>
+                        <% licenses.forEach(license=> {%>
+                            <option <% if (product.licence_id===license.licence_id) {%> selected <%} %> value="<%=
+                                        license.licence_name %>"> <%= license.licence_name %>
+                            </option>
+                            <%}); %>
                     </select>
                 </div>
                 <div class="form__field">
@@ -40,23 +42,26 @@
                 <div class="form__field">
                     <label class="form__label" for="sku">SKU:</label>
                     <input class="form__input--sku" type="text" name="sku" id="sku" value="<%= product.sku %>" required>
-                    <label class="form__label" for="price">Precio: $</label>
-                    <input class="form__input--price" type="number" name="price" id="price" step="0.01" min="0"
-                        value="<%= product.price %>" required>
+                    <label class="form__label" for="price">Precio:</label>
+                    <div class="form__input--wrapper"><span>$ </span><input class="form__input--price" type="number"
+                            name="price" id="price" step="0.01" min="0" value="<%= product.price %>" required></div>
                     <label class="form__label" for="stock">Stock:</label>
                     <input class="form__input--stock" type="number" name="stock" id="stock" min="0"
                         value="<%= product.stock %>" required>
                 </div>
                 <div class="form__field">
                     <label class="form__label" for="discount">Descuento:</label>
-                    <input class="form__input--discount" type="text" name="discount" id="discount"
-                        value="<%= product.discount %> %">
+                    <div class="form__input--wrapper"><input class="form__input--discount" type="text" name="discount"
+                            id="discount" value="<%= product.discount %>"><span>%</span></div>
                     <label class="form__label" for="dues">Cuotas:</label>
                     <select class="form__select--dues" id="dues" name="dues">
-                        <option>Sin cuotas</option>
-                        <option>3 cuotas sin interés</option>
-                        <option selected>6 cuotas sin interés</option>
-                        <option>12 cuotas sin interés</option>
+                        <option <% if (product.dues===0) {%>selected<%} %> value="0" >Sin cuotas</option>
+                        <option <% if (product.dues===3) {%>selected<%} %> value="3" >3 cuotas sin interés
+                        </option>
+                        <option <% if (product.dues===6) {%>selected<%} %> value="6" >6 cuotas sin interés
+                        </option>
+                        <option <% if (product.dues===12) {%>selected<%} %> value="12" >12 cuotas sin interés
+                        </option>
                     </select>
                 </div>
                 <div class="form__field">
