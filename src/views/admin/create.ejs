@@ -13,7 +13,7 @@
     <%- include ('../partials/header') %>
         <main class="edit container">
             <h1 class="edit__title">CREAR NUEVO ITEM</h1>
-            <form class="edit__form" action="" method="POST" target="_self" enctype="application/x-www-form-urlencoded">
+            <form class="edit__form" action="" method="POST" target="_self" enctype="multipart/form-data">
                 <div class="form__field">
                     <label class="form__label" for="category">Categoría:</label>
                     <select class="form__select--category" id="category" name="category" required>
@@ -65,7 +65,8 @@
                 </div>
                 <div class="form__field">
                     <label class="form__label" for="productImage">Imágenes:</label>
-                    <input class="form__input-img" type="file" name="productImage" id="productImage" required>
+                    <input class="form__input-img" type="file" name="productImages" id="productImages" multiple
+                        required>
                 </div>
                 <div class="form__buttons">
                     <input class="form__submit" type="submit" value="Agregar Producto">

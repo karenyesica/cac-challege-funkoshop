@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const upload = require("../middlewares/uploadFiles");
 
 const {
   adminView,
@@ -12,7 +13,7 @@ const {
 
 router.get("/", adminView);
 router.get("/create", createView);
-router.post("/create", createItem);
+router.post("/create", upload.array("productImages", 2), createItem);
 router.get("/edit/:id", editView);
 router.put("/edit/:id", editItem);
 router.delete("/delete/:id", deleteItem);
