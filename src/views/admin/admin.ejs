@@ -61,9 +61,10 @@
                                     <a href="/admin/edit/<%= product.product_id %>">
                                         <img src="../../img/icons/edit_pencil.svg" alt="Ícono de lápiz para editar">
                                     </a>
-                                    <form action="" method="POST">
-                                        <img src="../../img/icons/delete_trash.svg"
-                                            alt="Ícono de papelero para eliminar">
+                                    <form action="/admin/delete/<%= product.product_id %>?_method=DELETE" method="POST"
+                                        enctype="application/x-www-form-urlencoded">
+                                        <button type="submit"><img src="../../img/icons/delete_trash.svg"
+                                                alt="Ícono de papelero para eliminar"></button>
                                     </form>
                                 </td>
                             </tr>

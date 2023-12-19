@@ -94,11 +94,16 @@
 
 .list__table__buttons {
   display: flex;
+  gap: 42px;
+}
+
+.list__table__buttons button {
+  border: none;
+  background-color: transparent;
 }
 
 .list__table__buttons img {
   width: 34px;
   height: 34px;
-  margin-left: 42px;
   cursor: pointer;
 }

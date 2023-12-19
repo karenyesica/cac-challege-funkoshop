@@ -19,7 +19,7 @@
                     <select class="form__select--category" id="category" name="category" required>
                         <option value="" disabled selected hidden>Seleccionar</option>
                         <% categories.forEach(category=>{%>
-                            <option value="<%= category.category_name %>">
+                            <option value="<%= category.category_id %>">
                                 <%= category.category_name %>
                             </option>
                             <%}) %>
@@ -28,18 +28,18 @@
                     <select class="form__select--license" id="license" name="license" required>
                         <option value="" disabled selected hidden>Seleccionar</option>
                         <% licenses.forEach(license=>{%>
-                            <option value="<%=license.licence_name %>">
+                            <option value="<%=license.licence_id %>">
                                 <%= license.licence_name %>
                             </option>
                             <%}) %>
                     </select>
                 </div>
                 <div class="form__field">
-                    <label class="form__label" for="productName">Nombre del producto:</label>
-                    <input class="form__input--product" type="text" name="productName" id="productName"
+                    <label class="form__label" for="name">Nombre del producto:</label>
+                    <input class="form__input--product" type="text" name="name" id="name"
                         placeholder="Luna Lovegood Lion Mask" required>
                 </div>
-                <textarea class="form__textarea--edit" name="productDescription" id="" rows="7"
+                <textarea class="form__textarea--edit" name="description" id="" rows="7"
                     placeholder="Descripción del producto" required></textarea>
                 <div class="form__field">
                     <label class="form__label" for="sku">SKU:</label>
@@ -60,7 +60,10 @@
                         <option value="0">Sin cuotas</option>
                         <option value="3">3 cuotas sin interés</option>
                         <option value="6">6 cuotas sin interés</option>
+                        <option value="9">9 cuotas sin interés</option>
                         <option value="12">12 cuotas sin interés</option>
+                        <option value="18">18 cuotas sin interés</option>
+                        <option value="24">24 cuotas sin interés</option>
                     </select>
                 </div>
                 <div class="form__field">

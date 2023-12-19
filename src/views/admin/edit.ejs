@@ -13,13 +13,14 @@
     <%- include ('../partials/header') %>
         <main class="edit container">
             <h1 class="edit__title">EDITAR ITEM</h1>
-            <form class="edit__form" action="" method="GET" target="_self" enctype="application/x-www-form-urlencoded">
+            <form class="edit__form" action="/admin/edit/<%= product.product_id %>?_method=PUT" method="POST"
+                target="_self" enctype="multipart/form-data">
                 <div class="form__field">
                     <label class="form__label" for="category">Categoría:</label>
                     <select class="form__select--category" id="category" name="category" required>
                         <% categories.forEach(category=> {%>
                             <option <% if (product.category_id===category.category_id) {%> selected <%} %> value="<%=
-                                        category.category_name %>"> <%= category.category_name %>
+                                        category.category_id %>"> <%= category.category_name %>
                             </option>
                             <%}); %>
                     </select>
@@ -27,17 +28,17 @@
                     <select class="form__select--license" id="license" name="license" required>
                         <% licenses.forEach(license=> {%>
                             <option <% if (product.licence_id===license.licence_id) {%> selected <%} %> value="<%=
-                                        license.licence_name %>"> <%= license.licence_name %>
+                                        license.licence_id %>"> <%= license.licence_name %>
                             </option>
                             <%}); %>
                     </select>
                 </div>
                 <div class="form__field">
-                    <label class="form__label" for="productName">Nombre del producto:</label>
-                    <input class="form__input--product" type="text" name="productName" id="productName"
+                    <label class="form__label" for="name">Nombre del producto:</label>
+                    <input class="form__input--product" type="text" name="name" id="name"
                         value="<%= product.product_name %>" required>
                 </div>
-                <textarea class="form__textarea--edit" name="productDescription" id="" rows="7"
+                <textarea class="form__textarea--edit" name="description" id="" rows="7"
                     required><%= product.product_description %></textarea>
                 <div class="form__field">
                     <label class="form__label" for="sku">SKU:</label>
@@ -51,7 +52,7 @@
                 </div>
                 <div class="form__field">
                     <label class="form__label" for="discount">Descuento:</label>
-                    <div class="form__input--wrapper"><input class="form__input--discount" type="text" name="discount"
+                    <div class="form__input--wrapper"><input class="form__input--discount" type="number" name="discount"
                             id="discount" value="<%= product.discount %>"><span>%</span></div>
                     <label class="form__label" for="dues">Cuotas:</label>
                     <select class="form__select--dues" id="dues" name="dues">
@@ -60,13 +61,19 @@
                         </option>
                         <option <% if (product.dues===6) {%>selected<%} %> value="6" >6 cuotas sin interés
                         </option>
+                        <option <% if (product.dues===9) {%>selected<%} %> value="9" >9 cuotas sin interés
+                        </option>
                         <option <% if (product.dues===12) {%>selected<%} %> value="12" >12 cuotas sin interés
+                        </option>
+                        <option <% if (product.dues===18) {%>selected<%} %> value="18" >18 cuotas sin interés
+                        </option>
+                        <option <% if (product.dues===24) {%>selected<%} %> value="24" >24 cuotas sin interés
                         </option>
                     </select>
                 </div>
                 <div class="form__field">
                     <label class="form__label" for="productImage">Imágenes:</label>
-                    <input class="form__input-img" type="file" name="productImages" id="productImages" required>
+                    <input class="form__input-img" type="file" name="productImages" id="productImages" multiple>
                 </div>
                 <div class="form__field">
                     <picture class="form__picture">
