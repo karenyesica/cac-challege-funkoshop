@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
+const { initSession } = require("./src/middlewares/session");
 
 /* Routes imports*/
 
@@ -35,6 +36,10 @@ app.use(methodOverride("_method"));
 /* Carpeta de archivos estáticos */
 
 app.use(express.static("public"));
+
+/* Crear sesión de usuario */
+
+app.use(initSession());
 
 /* Middleware a las rutas */
 
