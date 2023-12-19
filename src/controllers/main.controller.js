@@ -1,8 +1,6 @@
 const mainControllers = {
   homeView: (req, res) => {
-    res.render("index", {
-      isLogged: false,
-    });
+    res.render("index");
   },
   contact: (req, res) => res.send("Ruta para Contacto"),
   about: (req, res) => res.send("Ruta para Nosotros"),
