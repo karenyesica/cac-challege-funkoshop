@@ -6,7 +6,6 @@ const shopControllers = {
     const data = await getAll();
 
     res.render(path.resolve(__dirname, "../views/shop/shop.ejs"), {
-      isLogged: false,
       data,
     });
   },
@@ -16,15 +15,12 @@ const shopControllers = {
     //const [item] = await getOne(itemId);
     const [item] = await getOne({ product_id: id });
     res.render(path.resolve(__dirname, "../views/shop/item.ejs"), {
-      isLogged: false,
       item,
     });
   },
   addItem: (req, res) => res.send("Ruta para agregar un nuevo Item"),
   cartView: (req, res) => {
-    res.render(path.resolve(__dirname, "../views/shop/cart.ejs"), {
-      isLogged: false,
-    });
+    res.render(path.resolve(__dirname, "../views/shop/cart.ejs"));
   },
   addToCart: (req, res) => res.send("Ruta para agregar un Item al Carrito"),
 };

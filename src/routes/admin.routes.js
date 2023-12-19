@@ -11,8 +11,8 @@ const {
   deleteItem,
 } = require("../controllers/admin.controller");
 
-const logged = (req, res, next) => {
-  if (req.session.logged) {
+const isLogged = (req, res, next) => {
+  if (req.session.isLogged) {
     next();
   } else {
     return res
@@ -21,10 +21,10 @@ const logged = (req, res, next) => {
   }
 };
 
-router.get("/", logged, adminView);
-router.get("/create", logged, createView);
+router.get("/", isLogged, adminView);
+router.get("/create", isLogged, createView);
 router.post("/create", upload.array("productImages", 2), createItem);
-router.get("/edit/:id", logged, editView);
+router.get("/edit/:id", isLogged, editView);
 router.put("/edit/:id", upload.array("productImages", 2), editItem);
 router.delete("/delete/:id", deleteItem);
 

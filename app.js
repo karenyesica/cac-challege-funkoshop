@@ -41,6 +41,13 @@ app.use(express.static("public"));
 
 app.use(initSession());
 
+/* Usar session */
+
+app.use((req, res, next) => {
+  res.locals.isLogged = req.session.isLogged;
+  next();
+});
+
 /* Middleware a las rutas */
 
 app.use("/", mainRoutes);
@@ -51,7 +58,7 @@ app.use("/auth", authRoutes);
 /* Middleware de error 404 */
 
 app.use((req, res) => {
-  res.status(404).send("¡Ups! Página no encontrada");
+  res.status(404).send("¡Ups! Error 404 Página no encontrada 😭");
 });
 
 /* Método para indicar que puerto tiene que escuchar y correr el server*/

@@ -14,19 +14,16 @@ const adminControllers = {
     const data = await getAll();
 
     res.render(path.resolve(__dirname, "../views/admin/admin.ejs"), {
-      isLogged: true,
       data,
     });
   },
   createView: async (req, res) => {
     const categories = await categoryService.getAllCategories();
     const licenses = await licenseService.getAllLicense();
-    // const allProducts = await getAll();
+
     res.render(path.resolve(__dirname, "../views/admin/create.ejs"), {
-      isLogged: true,
       categories,
       licenses,
-      // allProducts,
     });
   },
   createItem: async (req, res) => {
@@ -61,7 +58,6 @@ const adminControllers = {
     // console.log(licenses);
 
     res.render(path.resolve(__dirname, "../views/admin/edit.ejs"), {
-      isLogged: true,
       product,
       categories,
       licenses,

@@ -31,7 +31,8 @@
                     </p>
                     <p class="item__price">$ <%= item.price %>
                     </p>
-                    <form class="item__cart" method="POST" enctype="application/x-www-form-urlencoded" action="">
+                    <form class="item__cart" method="POST" enctype="application/x-www-form-urlencoded"
+                        action="/shop/cart">
                         <div>
                             <input class="item__input" type="text" name="quantity" id="quantity" placeholder="0"
                                 autocomplete="off">
